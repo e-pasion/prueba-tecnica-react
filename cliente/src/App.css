@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.categoryBackground{
+  background-image: url('./assets/images/placeholder.png');
+  background-color: #1f1f1f;
+  background-repeat: no-repeat;
+  background-position: center;
+}
