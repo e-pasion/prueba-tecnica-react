@@ -6,6 +6,9 @@ import Cover from "./Cover";
 function ListCover({type}) {
 
         const [data,setData] = useState([]);
+        const [loading,setLoading] =useState(true);
+        const [error,setError] =useState(false);
+
         
     
         useEffect(()=>{
@@ -15,23 +18,34 @@ function ListCover({type}) {
         
     
         async function getMovies(){
-            const data= await getData();
-            const entries=data.data.entries
-            const filterEntries=entries.filter((entry)=>{
-                return entry.programType==type && entry.releaseYear>=2010;
-            })
-    
-            filterEntries.sort((a,b)=>{
-                    console.log(a["title"])
-                    return a["title"] > b["title"]?1:-1;
+                let data;
+                try {
+                    data= await getData();
+                } catch (error) {
+                    setLoading(false);
+                    setError(true);
+                }
+                const entries=data.data.entries
+                const filterEntries=entries.filter((entry)=>{
+                    return entry.programType==type && entry.releaseYear>=2010;
+                })
+        
+                filterEntries.sort((a,b)=>{
+                        console.log(a["title"])
+                        return a["title"] > b["title"]?1:-1;
+                    
+                })
+                const result=filterEntries.slice(0,20)
+                setData(result);
+                setLoading(false);
                 
-            })
-            const result=filterEntries.slice(0,20)
-            setData(result);
-            console.log(result)
-    
-        }
+            
 
+
+        }
+    
+        if(loading) return <h1 className="mx-28 mt-20">Loading ...</h1>
+        if(error) return <h1 className="mx-28 mt-20">Oops something went wrong ...</h1>
 
 
   return (
