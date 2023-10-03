@@ -1,7 +1,11 @@
-
+import Header from "../components/Header"
 function Inicio() {
   return (
-    <div>Inicio</div>
+    <div>
+        <Header message={"Popular titles"}/>
+
+
+    </div>
   )
 }
 
