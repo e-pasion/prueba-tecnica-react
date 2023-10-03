@@ -3,6 +3,7 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Inicio from './pages/Inicio'
 import Peliculas from './pages/Peliculas'
 import Series from './pages/Series'
+import Navbar from './components/Navbar'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <>
+    <Navbar/>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Inicio/>} />
