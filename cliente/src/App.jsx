@@ -5,13 +5,11 @@ import Series from './pages/Series'
 import Navbar from './components/Navbar'
 import './App.css'
 import Footer from './components/Footer'
-import { CoverProvider } from './context/CoverContext'
 
 function App() {
 
   return (
     <>
-    <CoverProvider>
     <BrowserRouter>
     <Navbar/>
     <div className="min-h-[calc(100vh-17rem)] w-full">
@@ -24,7 +22,6 @@ function App() {
       </div>
     </BrowserRouter>
     <Footer/>
-    </CoverProvider>
      
     </>
   )
