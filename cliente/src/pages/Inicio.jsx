@@ -5,7 +5,7 @@ function Inicio() {
   return (
     <div>
         <Header message={"Popular titles"}/>
-        <div className="mx-10 mt-10 md:mx-28 flex space-x-4">
+        <div className="mx-0 mt-10 md:mx-28 flex justify-center md:justify-start flex-wrap">
             <NavLink to={"/series"}>
             <CategoryCard  message={"SERIES"}/>
             <p>Popular Series</p>

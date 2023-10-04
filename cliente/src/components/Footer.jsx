@@ -8,7 +8,7 @@ import windowsStore from '../assets/images/store/windows-store.svg'
 
 function Footer() {
     return (
-        <div className="bg-[#1f1f1f] px-28 pb-10">
+        <div className="bg-[#1f1f1f] px-5 md:px-28 pb-10">
             <div className="w-full py-4">
                 <ul className="flex flex-wrap items-center my-3 text-xs font-medium text-gray-300">
                     <li>
@@ -61,10 +61,10 @@ function Footer() {
                     <img className='w-7' src={instagramButton} alt="" />
                 </div>
 
-                <div className='flex h-10 items-center'>
-                <img className='w-28 h-10 mr-2' src={appStore} alt="" />
-                    <img className='w-28 h-10' src={playStore} alt="" />
-                    <img className='w-28 h-8' src={windowsStore} alt="" />
+                <div className='flex h-10 items-center mt-5 md:mt-0'>
+                <img className='w-20 md:w-28 h-10 mr-2' src={appStore} alt="" />
+                <img className='w-20 md:w-28 h-10' src={playStore} alt="" />
+                <img className='w-20 md:w-28 h-8' src={windowsStore} alt="" />
 
                 </div>
             </div>

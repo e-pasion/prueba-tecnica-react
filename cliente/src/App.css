@@ -8,3 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+body{
+  overflow-x: hidden;
+}

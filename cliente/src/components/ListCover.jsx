@@ -31,17 +31,12 @@ function ListCover({type}) {
                 })
         
                 filterEntries.sort((a,b)=>{
-                        console.log(a["title"])
                         return a["title"] > b["title"]?1:-1;
                     
                 })
                 const result=filterEntries.slice(0,20)
                 setData(result);
                 setLoading(false);
-                
-            
-
-
         }
     
         if(loading) return <h1 className="mx-28 mt-20">Loading ...</h1>
@@ -50,7 +45,7 @@ function ListCover({type}) {
 
   return (
     <div>
-                <div className=" flex flex-wrap mt-10 mx-28">
+                <div className=" flex flex-wrap justify-center md:justify-between mt-10 md:mx-28">
         {   
             data.map((serie)=>{
                 return <Cover key={serie?.title+ data?.releaseYear} cover={serie}/>
